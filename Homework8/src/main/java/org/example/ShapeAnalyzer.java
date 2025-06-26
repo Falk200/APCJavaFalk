@@ -5,7 +5,7 @@ import java.util.*;
 public class ShapeAnalyzer {
 
     public static List<Shape> filterByMinArea(Collection<? extends Shape> shapes, double minArea){
-        List<Shape> filteredShapes = new ArrayList<Shape>();
+        List<Shape> filteredShapes = new ArrayList<>();
         for (Shape shape : shapes) {
             if (shape.getArea() >= minArea){
                 filteredShapes.add(shape);
@@ -26,7 +26,7 @@ public class ShapeAnalyzer {
     }
 
     public static <T extends Shape> Map<String, List<T>> groupByType(Collection<T> shapes){
-        Map<String, List<T>> groups = new HashMap<String, List<T>>();
+        Map<String, List<T>> groups = new HashMap<>();
         for (Shape shape : shapes) {
             String name = shape.getClass().getSimpleName();
             List<T> group = new ArrayList<>();

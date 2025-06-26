@@ -19,6 +19,8 @@ public class PersistentShapeManager {
             }
         }catch (IOException e){
            e.printStackTrace();
+       }catch(Exception e){
+           logger.severe("Error saving shapes to file" + e.getMessage());
        }
     }
 

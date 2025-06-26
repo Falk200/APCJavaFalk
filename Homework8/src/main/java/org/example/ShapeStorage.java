@@ -6,16 +6,15 @@ public class ShapeStorage <T extends Shape> extends ArrayList<T> {
 
     public double getTotalArea(){
         double sum = 0;
-        for(int i=0;i<this.size();i++){
-            sum += this.get(i).getArea();
-
+        for (T t : this) {
+            sum += t.getArea();
         }
         return sum;
     }
 
     public void displayAllShapes(){
-        for(int i=0;i<this.size();i++){
-            System.out.println(this.get(i).toString());
+        for (T t : this) {
+            System.out.println(t.toString());
         }
     }
 
